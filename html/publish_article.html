@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>New Article</title>
+  <link rel="stylesheet" href="../css/publish_article.css">
+</head>
+<body>
+<div class="wrapper">    
+    <header class="main-head">Project21 - громкие события 21 века</header>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="main.html">Главная</a></li>
+        <li><a href="publish_article.html">Предложить статью</a></li>
+        <li><a href="">Личный кабинет</a></li>
+        <li><a href="">Случайная статья</a></li>
+      </ul>
+    </nav>
+    <div class="content">
+        
+        <article class="article">            
+            <div class="article-form">
+                <h1>Предложить статью</h1>
+                <form action="submit_article.php" method="post" enctype="multipart/form-data">
+                  <label for="event-image">Фото с события:</label>
+                  <input type="file" id="event-image" name="event-image" accept="image/*">
+                  
+                  <label for="event-date">Дата события:</label>
+                  <input type="date" id="event-date" name="event-date">
+                  
+                  <label for="event-text">Текст статьи:</label>
+                  <textarea id="event-text" name="event-text" rows="8" cols="50"></textarea>
+                  
+                  <input type="submit" value="Submit">
+                </form>
+              </div>
+        </article>
+    
+        
+      </div>
+      <aside class="side">
+        <h1>Подборка статей от редакции сайта</h1>
+        <article class="side-article">
+          <img src="../res/drawable/stratching.jpg" alt="Article Image">
+          <h1 class="article-title">Война русов с древними ящерами за Гиперборею</h1>
+        </article>
+  
+        <article class="side-article">
+          <img src="../res/drawable/bagirov.jpg" alt="Article Image">
+          <h1 class="article-title">Смерть великого профессора Багирова</h1>
+        </article>
+      </aside>
+      <footer class="main-footer">
+        <div class="about-us">
+          <h2>Кто мы?</h2>
+          <p>Рассказываем вам о самых громких событиях 21 века без политической пропаганды</p>
+        </div>
+        <div class="contact-us">
+          <h2>Связаться с нами</h2>
+          <p>+7 924 087 27 27</p>
+        </div>
+        <div class="partners">
+          <h2>Наши партнеры</h2>
+            <a href="https://aleksej1024.github.io/soviet_tunes/">Soviet Tunes</a>
+        </div>
+  
+      </footer>
+
+</div>
+</body>
+</html>
