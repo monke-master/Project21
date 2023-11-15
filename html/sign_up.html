@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>New Article</title>
+  <link rel="stylesheet" href="../css/account.css">
+</head>
+<body>
+<div class="wrapper">    
+    <header class="main-head">Project21 - громкие события 21 века</header>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="main.html">Главная</a></li>
+        <li><a href="publish_article.html">Предложить статью</a></li>
+        <li><a href="account.html">Личный кабинет</a></li>
+        <li><a href="">Случайная статья</a></li>
+      </ul>
+    </nav>
+    <div class="content">
+        <div class="container">
+            <h1>Sign Up</h1>
+            <form class="signup-form" action="submit_signup.php" method="post">
+              <label for="profile-pic">Profile Picture:</label>
+              <input type="file" id="profile-pic" name="profile-pic" accept="image/*">
+              
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" required>
+              
+              <label for="username">Username:</label>
+              <input type="text" id="username" name="username" required>
+              
+              <label for="password">Password:</label>
+              <input type="password" id="password" name="password" required>
+              
+              <label for="dob">Date of Birth:</label>
+              <input type="date" id="dob" name="dob" required>
+              
+              <input type="submit" value="Sign Up">
+            </form>
+        </div>
+
+    </div>
+      <aside class="side">
+        <h1>Подборка статей от редакции сайта</h1>
+        <article class="side-article">
+          <img src="../res/drawable/stratching.jpg" alt="Article Image">
+          <h1 class="article-title">Война русов с древними ящерами за Гиперборею</h1>
+        </article>
+  
+        <article class="side-article">
+          <img src="../res/drawable/bagirov.jpg" alt="Article Image">
+          <h1 class="article-title">Смерть великого профессора Багирова</h1>
+        </article>
+      </aside>
+      <footer class="main-footer">
+        <div class="about-us">
+          <h2>Кто мы?</h2>
+          <p>Рассказываем вам о самых громких событиях 21 века без политической пропаганды</p>
+        </div>
+        <div class="contact-us">
+          <h2>Связаться с нами</h2>
+          <p>+7 924 087 27 27</p>
+        </div>
+        <div class="partners">
+          <h2>Наши партнеры</h2>
+            <a href="https://aleksej1024.github.io/soviet_tunes/">Soviet Tunes</a>
+        </div>
+  
+      </footer>
+
+</div>
+</body>
+</html>
