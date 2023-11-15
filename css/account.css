@@ -1,0 +1,32 @@
+@import "main_style.css";
+
+.container {
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .profile {
+    text-align: center;
+  }
+  
+  .profile-picture {
+    width: 10em;
+    height: 10em;
+    border-radius: 50%;
+  }
+  
+  .edit-profile-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .edit-profile-form {
+    text-align: left;
+  }
+  
+  .edit-profile-form label,
+  .edit-profile-form input {
+    display: block;
+    margin-bottom: 10px;
+  }
