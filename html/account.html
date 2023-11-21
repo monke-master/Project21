@@ -16,22 +16,23 @@
         <li><a href="">Случайная статья</a></li>
       </ul>
     </nav>
-    <div class="content">
+    <div class="content" id="content">
         <article class="container">
             <div class="profile">
               <img class="profile-picture" src="../res/drawable/bagirov.jpg" alt="User Profile Picture">
-              <h2>Профессор Багиров</h2>
+              <h2 id="hdr_username">Профессор Багиров</h2>
             </div>
             
             <div class="edit-profile">
               <form class="edit-profile-form" method="post">
                 <label for="email">Email:</label>
-                <input type="email" id="email" name="email" value="user@example.com">
+                <input type="email" id="email" name="email" placeholder="Новый адрес эл. почты">
           
                 <label for="password">Password:</label>
-                <input type="password" id="password" name="password" placeholder="Enter new password">
+                <input type="password" id="password" name="password" placeholder="Новый пароль">
           
-                <input type="submit" value="Update Profile">
+                <input type="button" value="Обновить профиль">
+                <input type="button" value="Выйти" id="sign_out_btn">
               </form>
             </div>
         </article>
@@ -82,5 +83,6 @@
       </footer>
 
 </div>
+<script src="../javaScript/account.js"></script>
 </body>
 </html>

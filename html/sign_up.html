@@ -17,26 +17,29 @@
       </ul>
     </nav>
     <div class="content">
-        <form action="/action_page.php" style="border:1px solid #ccc">
+        <form style="border:1px solid #ccc">
             <div class="container">
               <h1>Регистрация</h1>
               <p>Для публикаций статей вам потребуется учетная запись.</p>
+
+              <label for="username"><b>Придумайте ник</b></label>
+              <input type="text" placeholder="Придумайте ник" name="username" id="edit_txt_username" required>
           
               <label for="email"><b>Адрес эл. почты</b></label>
-              <input type="text" placeholder="Адрес эл. почты" name="email" required>
+              <input type="text" placeholder="Адрес эл. почты" name="email" id="edit_txt_email" required>
           
               <label for="psw"><b>Пароль</b></label>
-              <input type="password" placeholder="Пароль" name="psw" required>
+              <input type="password" placeholder="Пароль" name="psw" id="edit_txt_psw" required>
           
               <label for="psw-repeat"><b>Повторите пароль</b></label>
-              <input type="password" placeholder="Повторите пароль" name="psw-repeat" required>
+              <input type="password" placeholder="Повторите пароль" name="psw-repeat" id="edit_txt_psw_repeat" required>
               
         
               <p>Создавая учетную запись, вы соглашаетесь с <a href="#" style="color:dodgerblue">политикой конфиденциальности</a>.</p>
           
               <div class="clearfix">
-                <button type="button" class="cancelbtn">У меня уже есть учетная запись</button>
-                <button type="submit" class="signupbtn">Регистрация</button>
+                <button type="button" class="cancelbtn" id="sign_in_btn">У меня уже есть учетная запись</button>
+                <button type="button" class="signupbtn" id="sign_up_btn">Регистрация</button>
               </div>
             </div>
           </form>
@@ -70,5 +73,6 @@
       </footer>
 
 </div>
+<script src="../javaScript/sign_up.js"></script>
 </body>
 </html>

@@ -17,19 +17,19 @@
       </ul>
     </nav>
     <div class="content">
-        <form action="/action_page.php" style="border:1px solid #ccc">
+        <form style="border:1px solid #ccc">
             <div class="container">
               <h1>Войти в учетную запись</h1>
           
               <label for="email"><b>Адрес эл. почты</b></label>
-              <input type="text" placeholder="Адрес эл. почты" name="email" required>
+              <input type="text" placeholder="Адрес эл. почты" name="email" id="edit_text_email" required>
           
               <label for="psw"><b>Пароль</b></label>
-              <input type="password" placeholder="Пароль" name="psw" required>
+              <input type="password" placeholder="Пароль" name="psw" id="edit_text_psw" required>
 
               <div class="clearfix">
-                <button type="button" class="cancelbtn">Зарегистрироваться</button>
-                <button type="submit" class="signupbtn">Войти</button>
+                <button type="button" class="cancelbtn" id="sign_up_btn">Зарегистрироваться</button>
+                <button type="button" class="signupbtn" id="sign_in_btn">Войти</button>
               </div>
             </div>
           </form>
@@ -63,5 +63,6 @@
       </footer>
 
 </div>
+<script src="../javaScript/sign_in.js"></script>
 </body>
 </html>
