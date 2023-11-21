@@ -1,4 +1,4 @@
-function createArticleElement(articleData) {
+function createArticleElement(articleData, containerId) {
     // Create the article element
     const article = document.createElement('article');
     article.classList.add('article');
@@ -31,27 +31,10 @@ function createArticleElement(articleData) {
     article.appendChild(date);
 
     // Find the container where you want to add the article and append the created article element
-    const container = document.getElementById("content");
+    const container = document.getElementById(containerId);
     container.appendChild(article);
 
     article.addEventListener('click', function() {
         window.location.href = `../html/article.html?articleId=${articleData.id}`;
     });
 }
-
-function getAllArticles() {
-    var articles = JSON.parse(localStorage.getItem('articles')) || [];
-    articles.sort((a, b) => b.publicationDate - a.publicationDate);
-    return articles;  
-}
-
-function loadArticles() {
-    const articles = getAllArticles();
-    
-    for (const index in articles) {
-        createArticleElement(articles[index]);
-    }
-}
-
-
-loadArticles()
