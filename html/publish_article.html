@@ -22,19 +22,25 @@
             <h1>Предложить статью</h1>
             <div class="article-form">
                 
-                <form action="submit_article.php" method="post" enctype="multipart/form-data">
+                <form method="post" enctype="multipart/form-data">
                   <h3>Выберите подходящее фото для события из предложенных:</h2>
                   <div class="image-gallery">
                     
                   </div>
                   
+                  <label for="event-title">Название статьи:</label>
+                  <textarea id="edit_text_title" name="event-title" rows="1" ></textarea>
+
                   <label for="event-date">Дата события:</label>
-                  <input type="date" id="event-date" name="event-date">
+                  <input type="date" id="edit_text_date" name="event-date" min="2001-01-01" max="2100-12-31">
+
+                  <label for="event-descr">Описание статьи:</label>
+                  <textarea id="edit_text_descr" name="event-descr" rows="4" ></textarea>
                   
                   <label for="event-text">Текст статьи:</label>
-                  <textarea id="event-text" name="event-text" rows="8" cols="50"></textarea>
+                  <textarea id="edit_text_event" name="event-text" rows="8" cols="50"></textarea>
                   
-                  <input type="submit" value="Отправить">
+                  <input type="button" value="Отправить" id="send_btn" class="send_button">
                 </form>
               </div>
         </article>

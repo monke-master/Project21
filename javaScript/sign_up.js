@@ -2,7 +2,8 @@ function signUp(username, email, password) {
     const user = {
         username: username,
         email: email,
-        password: password
+        password: password,
+        articles: []
     };
 
     localStorage.setItem('currentUser', JSON.stringify(user));
@@ -32,6 +33,7 @@ function checkEmail() {
 
 function checkPassword() {
     let password = document.getElementById('edit_txt_psw').value;
+    let passwordRepeated = document.getElementById('edit_txt_psw_repeat').value;
     if (password === "") {
         alert("Введите пароль!");
         return false;
@@ -54,6 +56,6 @@ document.getElementById("sign_up_btn").addEventListener('click', function() {
     let password = checkPassword();
     if (username && email && password) {
         signUp(username, email, password);
-        window.location = '../html/account.html'
+        window.location = '../html/account.html';
     }
 })
