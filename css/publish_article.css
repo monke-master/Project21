@@ -45,3 +45,29 @@
   input[type="submit"]:hover {
     background-color: #45a049;
   }
+
+
+.image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+  
+.image-container {
+    margin: 10px;
+}
+  
+.gallery-image {
+    width: 200px;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+  
+.gallery-image:hover {
+    transform: scale(1.1);
+}
+  
+.selected {
+    border: 3px solid red;
+}
