@@ -1,3 +1,8 @@
+function generateId() {
+    return Math.random().toString(36) // Generates a random string ID
+}
+
+
 const photosPath = [
     'bagirov.jpg',
     'yarilo.jpg',
@@ -79,12 +84,13 @@ function createArticle(date, text, description, title) {
     const userDataString = localStorage.getItem('currentUser');
     const author = JSON.parse(userDataString);
     const article = {
+        id: generateId(),
         title: title,
         photoPath: pickedPhotoPath,
         eventDate: date,
         text: text, 
         description: description,
-        publicationDate: new Date(),
+        publicationDate: (new Date()).getTime(),
         authorEmail: author.email,
         likes: 0,
         comments: []

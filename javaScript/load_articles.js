@@ -22,7 +22,7 @@ function createArticleElement(articleData) {
     // Create and set content for the date paragraph
     const date = document.createElement('p');
     date.classList.add('article-date');
-    date.textContent = 'Опубликовано' + articleData.publicationDate;
+    date.textContent = 'Опубликовано ' + formatDate(articleData.publicationDate);
 
     // Append the created elements to the article
     article.appendChild(image);
@@ -33,10 +33,14 @@ function createArticleElement(articleData) {
     // Find the container where you want to add the article and append the created article element
     const container = document.getElementById("content");
     container.appendChild(article);
+
+    article.addEventListener('click', function() {
+        window.location.href = `../html/article.html?articleId=${articleData.id}`;
+    });
 }
 
 function getAllArticles() {
-    const articles = JSON.parse(localStorage.getItem('articles')) || [];
+    var articles = JSON.parse(localStorage.getItem('articles')) || [];
     articles.sort((a, b) => b.publicationDate - a.publicationDate);
     return articles;  
 }
@@ -45,7 +49,6 @@ function loadArticles() {
     const articles = getAllArticles();
     
     for (const index in articles) {
-
         createArticleElement(articles[index]);
     }
 }
