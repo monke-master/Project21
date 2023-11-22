@@ -10,7 +10,7 @@ function createCommentElement(commentData, containerId, author) {
     image.alt = 'Article Image';
 
     const commentDetails = document.createElement('div');
-    comment.classList.add('comment-details');
+    commentDetails.classList.add('comment-details');
 
     const username = document.createElement('span');
     username.classList.add("username");
