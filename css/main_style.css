@@ -20,6 +20,11 @@ body {
     color: var(--color-text);
 }
 
+/* лого */
+.logo {
+    font-size: 3em;
+}
+
 /* главный контейнер */
 .wrapper {
     margin: 0 auto;
@@ -32,8 +37,8 @@ body {
 .wrapper > * {
     border: 2px solid var(--color-onPrimary);
     background-color: var(--color-primary);
-    border-radius: 5px;
-    padding: 10px;
+    border-radius: 0.8em;
+    padding: 0.7em;
 }
 
 .wrapper {
@@ -95,6 +100,7 @@ nav a:hover {
     margin: 20px auto;
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px); 
 }
   
 .article-image {
@@ -133,7 +139,7 @@ nav a:hover {
     size: 50%;
     margin: 20px auto;
     padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
 }
 
 .side-article img {
