@@ -1,10 +1,23 @@
 :root {
     --default-text-size: 1.2em;
     --navigation-text-size-large: 2em;
+    --color-primary: white;
+    --color-onPrimary: #A7D1D2;
+    --color-background: white;
+    --color-secondary: #015366;
+    --color-secondaryDark: #033540;
+    --color-onSecondary: white;
+    --color-text: black;
+}
+
+body {
+    background-color: var(--color-background);
 }
 
 * {
+
     box-sizing: border-box;
+    color: var(--color-text);
 }
 
 /* главный контейнер */
@@ -17,8 +30,8 @@
 }
   
 .wrapper > * {
-    border: 2px solid #f08c00;
-    background-color: #ffec99;
+    border: 2px solid var(--color-onPrimary);
+    background-color: var(--color-primary);
     border-radius: 5px;
     padding: 10px;
 }
@@ -45,7 +58,7 @@ nav ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #333;
+    background-color: var(--color-secondary);
     display: flex;
 }
   
@@ -55,18 +68,19 @@ nav li {
   
 nav a {
     display: block;
-    color: white;
+    color: var(--color-onSecondary);
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
 }
   
 nav a:hover {
-    background-color: #111;
+    background-color:  var(--color-secondaryDark);
 }
 
 .main-nav {
     grid-area: nav;   
+    background-color: var(--color-secondary);
 }
   
 /* контент */
@@ -106,10 +120,16 @@ nav a:hover {
 
 /* сайдбар */
 .side {
+    background-color: var(--color-secondary);
+    
     grid-area: sidebar;
 }
 
+.side h1 {
+    color: var(--color-onSecondary);
+}
 .side-article {
+    color: var(--color-onSecondary);
     size: 50%;
     margin: 20px auto;
     padding: 20px;
