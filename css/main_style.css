@@ -148,7 +148,7 @@ nav a:hover {
   
 @media (min-width: 320px) {
     .wrapper {
-      grid-template-columns: 1fr 3fr;
+      grid-template-columns: 1fr 1fr;
       grid-template-areas:
         "header  header"
         "nav     nav"
@@ -156,6 +156,7 @@ nav a:hover {
         "sidebar sidebar"
         "footer footer";
     }
+
     nav ul {
         flex-direction: column;
     }
@@ -177,13 +178,14 @@ nav a:hover {
 
 @media (min-width: 768px) {
     .wrapper {
-      grid-template-columns: 1fr 4fr 1fr;
-      grid-template-areas:
-        "header  header  header"
-        "nav     nav     nav"
-        "content content sidebar"
-        "footer  footer  sidebar";
-    }
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+          "header  header"
+          "nav     nav"
+          "content content"
+          "sidebar sidebar"
+          "footer footer";
+      }
     nav ul {
         display: flex;
         justify-content: space-between;
