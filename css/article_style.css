@@ -32,6 +32,11 @@
 }
 
 
+.content {
+  display: none;
+  grid-area: content;
+}
+
 
 
 input[type="file"],

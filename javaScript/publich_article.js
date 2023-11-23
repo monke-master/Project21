@@ -128,4 +128,15 @@ document.getElementById("send_btn").addEventListener('click', function() {
    
 })
 
+function checkUser() {
+    if (getCurrentUser() == null) {
+        window.location.href = "../html/sign_up.html";
+    }
+    else {
+        document.getElementById("content").style.display = "block";
+    }
+}
+
+checkUser();
+
 initPhotos(photosPath);

@@ -71,3 +71,9 @@
 .selected {
     border: 3px solid red;
 }
+
+
+.content {
+  display: none;
+  grid-area: content;
+}
