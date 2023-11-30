@@ -1,5 +1,10 @@
 @import "main_style.css";
 
+:root {
+  --button-text-size: 1em;
+  --small-button-text-size: 0.5em;
+}
+
 /* Full-width input fields */
 input[type=text], input[type=password] {
   width: 100%;
@@ -47,7 +52,7 @@ button:hover {
 .cancelbtn, .signupbtn {
   float: left;
   width: 50%;
-  font-size: 0.5em;
+  font-size: var(--button-text-size);
 }
 
 
@@ -59,4 +64,81 @@ button:hover {
   content: "";
   clear: both;
   display: table;
+}
+
+/* адаптация под размер экрана */
+  
+@media (min-width: 320px) {
+  .wrapper {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "header  header"
+      "nav     nav"
+      "content content"
+      "sidebar sidebar"
+      "footer footer";
+  }
+
+  nav ul {
+      flex-direction: column;
+  }
+  nav a {
+      font-size: var(--navigation-text-size-large);
+  }
+  
+  .main-footer {
+      grid-template-columns: 1fr;
+      grid-template-areas:
+      "about-us"
+      "contact-us"
+      "partners";
+  }
+  .article-image {
+      width: 100%;
+  }
+  .logo {
+      font-size: var(--default-logo-size-small);
+  }
+  h1 {
+      font-size: var(--small-header-size);
+  }
+}
+
+@media (min-width: 768px) {
+  .wrapper {
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas:
+        "header  header"
+        "nav     nav"
+        "content content"
+        "sidebar sidebar"
+        "footer footer";
+    }
+  nav ul {
+      display: flex;
+      justify-content: space-between;
+  }
+  nav a {
+      font-size: var(--default-text-size);
+  }
+  .main-footer {
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas:
+      "about-us contact-us"
+      "partners";
+  }
+  .article-image {
+      width: 40%;
+  }
+  .logo {
+      font-size: var(--default-logo-size);
+  }
+  h1 {
+      font-size: var(--default-header-size);
+  }
+}
+
+
+@media (min-width: 1024px) {
+  .wrapper
 }
