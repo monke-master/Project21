@@ -1,61 +1,144 @@
 @import "main_style.css";
 
+:root {
+  --button-text-size: 1em;
+  --small-button-text-size: 0.5em;
+}
+
 /* Full-width input fields */
 input[type=text], input[type=password] {
-    width: 100%;
-    padding: 15px;
-    margin: 5px 0 22px 0;
-    display: inline-block;
-    border: none;
-    background: #f1f1f1;
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+  font-size: 1em;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+button:hover {
+  opacity:1;
+}
+
+/* Кнопка отмены */
+.cancelbtn {
+  /* padding: 14px 20px; */
+  background-color: #f44336;
+}
+
+/* Кнопки */
+.cancelbtn, .signupbtn {
+  float: left;
+  width: 50%;
+  font-size: var(--button-text-size);
+}
+
+
+.container {
+  padding: 16px;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* адаптация под размер экрана */
+  
+@media (min-width: 320px) {
+  .wrapper {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "header  header"
+      "nav     nav"
+      "content content"
+      "sidebar sidebar"
+      "footer footer";
+  }
+
+  nav ul {
+      flex-direction: column;
+  }
+  nav a {
+      font-size: var(--navigation-text-size-large);
   }
   
-  input[type=text]:focus, input[type=password]:focus {
-    background-color: #ddd;
-    outline: none;
+  .main-footer {
+      grid-template-columns: 1fr;
+      grid-template-areas:
+      "about-us"
+      "contact-us"
+      "partners";
   }
-  
-  hr {
-    border: 1px solid #f1f1f1;
-    margin-bottom: 25px;
+  .article-image {
+      width: 100%;
   }
-  
-  /* Set a style for all buttons */
-  button {
-    background-color: #04AA6D;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    cursor: pointer;
-    width: 100%;
-    opacity: 0.9;
+  .logo {
+      font-size: var(--default-logo-size-small);
   }
-  
-  button:hover {
-    opacity:1;
+  h1 {
+      font-size: var(--small-header-size);
   }
-  
-  /* Extra styles for the cancel button */
-  .cancelbtn {
-    padding: 14px 20px;
-    background-color: #f44336;
+}
+
+@media (min-width: 768px) {
+  .wrapper {
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas:
+        "header  header"
+        "nav     nav"
+        "content content"
+        "sidebar sidebar"
+        "footer footer";
+    }
+  nav ul {
+      display: flex;
+      justify-content: space-between;
   }
-  
-  /* Float cancel and signup buttons and add an equal width */
-  .cancelbtn, .signupbtn {
-    float: left;
-    width: 50%;
+  nav a {
+      font-size: var(--default-text-size);
   }
-  
-  /* Add padding to container elements */
-  .container {
-    padding: 16px;
+  .main-footer {
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas:
+      "about-us contact-us"
+      "partners";
   }
-  
-  /* Clear floats */
-  .clearfix::after {
-    content: "";
-    clear: both;
-    display: table;
+  .article-image {
+      width: 40%;
   }
+  .logo {
+      font-size: var(--default-logo-size);
+  }
+  h1 {
+      font-size: var(--default-header-size);
+  }
+}
+
+
+@media (min-width: 1024px) {
+  .wrapper
+}

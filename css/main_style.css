@@ -1,6 +1,10 @@
 :root {
-    --default-text-size: 1.2em;
-    --navigation-text-size-large: 2em;
+    --default-text-size: 1.5em;
+    --navigation-text-size-large: 1.3em;
+    --default-logo-size: 3em;
+    --default-logo-size-small: 1.2em;
+    --default-header-size: 1.5em;
+    --small-header-size: 1.2em;
     --color-primary: white;
     --color-onPrimary: #A7D1D2;
     --color-background: white;
@@ -12,17 +16,22 @@
 
 body {
     background-color: var(--color-background);
+    word-wrap: break-word;
 }
 
 * {
-
     box-sizing: border-box;
     color: var(--color-text);
 }
 
+h1 {
+    font-size: var(--default-header-size);
+}
+
 /* лого */
 .logo {
-    font-size: 3em;
+    font-size: var(--default-logo-size);
+    text-align: center;
 }
 
 /* главный контейнер */
@@ -200,6 +209,12 @@ nav a:hover {
     .article-image {
         width: 100%;
     }
+    .logo {
+        font-size: var(--default-logo-size-small);
+    }
+    h1 {
+        font-size: var(--small-header-size);
+    }
 }
 
 @media (min-width: 768px) {
@@ -227,6 +242,12 @@ nav a:hover {
     }
     .article-image {
         width: 40%;
+    }
+    .logo {
+        font-size: var(--default-logo-size);
+    }
+    h1 {
+        font-size: var(--default-header-size);
     }
 }
 
@@ -256,5 +277,8 @@ nav a:hover {
     }
     .article-image {
         width: 40%;
+    }
+    h1 {
+        font-size: var(--default-header-size);
     }
 }
