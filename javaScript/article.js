@@ -9,6 +9,17 @@ function getArticleById(id) {
     return articles.find(article => article.id === id);
 }
 
+function showUsername() {
+    document.getElementById("username").innerHTML = getCurrentUser().username;
+}
+function hideComment() {
+    if (getCurrentUser() == null) {
+        document.getElementById("write_comment").style.display = "none";
+    } else {
+        document.getElementById("write_comment").style.display = "flex";
+        showUsername();
+    }
+}
 
 function initArticleData(article) {
     document.getElementById("hdr_title").innerText = article.title;
@@ -20,5 +31,5 @@ function initArticleData(article) {
 
 
 initArticleData(getArticleById(getArticleId()));
-
+hideComment();
 

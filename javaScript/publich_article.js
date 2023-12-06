@@ -4,15 +4,17 @@ function generateId() {
 
 
 const photosPath = [
-    'bagirov.jpg',
-    'yarilo.jpg',
-    'lizard.jpg',
-    'stratching.jpg',
-    'bagirov.jpg',
-    'yarilo.jpg',
-    'lizard.jpg',
-    'stratching.jpg',
-
+    'protests.jpg',
+    'war.jpg',
+    'pandemia.jpg',
+    'teract.jpg',
+    "ai.jpg",
+    "science.jpg",
+    "racket.jpg",
+    "earth.jpg",
+    "war2.jpg",
+    "archeology.jpg",
+    "books.jpg"
 ]
 
 var pickedPhotoPath = ""
