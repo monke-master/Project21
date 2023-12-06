@@ -5,7 +5,6 @@
   --small-button-text-size: 0.5em;
 }
 
-/* Full-width input fields */
 input[type=text], input[type=password] {
   width: 100%;
   padding: 15px;
@@ -140,5 +139,32 @@ button:hover {
 
 
 @media (min-width: 1024px) {
-  .wrapper
+  .wrapper {
+    grid-template-columns: 1fr 4fr 1fr;
+    grid-template-areas:
+      "header  header  header"
+      "nav     nav     nav"
+      "content content sidebar"
+      "content content sidebar"
+      "footer  footer  sidebar";
+  }
+  nav ul {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: row;
+  }
+  nav a {
+      font-size: var(--default-text-size);
+  }
+  .main-footer {
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-areas:
+      "about-us contact-us partners"
+  }
+  .article-image {
+      width: 40%;
+  }
+  h1 {
+      font-size: var(--default-header-size);
+  }
 }
